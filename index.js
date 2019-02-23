@@ -11,7 +11,10 @@ function main() {
 
   $('form button').click(function() {
     event.preventDefault();
-    $('.shopping-list').append(`
+    //let newShoppingItem = $('#shopping-list-entry').val();
+    //!== ''
+    if ($('#shopping-list-entry').val()) {
+      $('.shopping-list').append(`
     <li>
           <span class="shopping-item">${$('#shopping-list-entry').val()}</span>
           <div class="shopping-item-controls">
@@ -23,7 +26,7 @@ function main() {
             </button>
           </div>
         </li>
-    `);
+    `);}
   });
 }
 
